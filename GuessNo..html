@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>javascript practice</title>
+<link rel="stylesheet" href="style.css">
+<script>
+
+var y = Math.floor(Math.random()*100);
+function check1()
+{
+		var x = document.getElementById("num").value;
+	if( x < y ){
+		document.getElementById("ree").innerHTML= "smaller number";
+			}
+	else if(x > y){
+		document.getElementById('ree').innerHTML= "larger number";
+		}
+		else if(x = y){
+			document.getElementById('ree').innerHTML= "You won matched with answer:" + y;
+		}
+}
+function check2()
+{		
+	var a = document.getElementById("num2").value;
+	if( a < y ){
+		document.getElementById("bee").innerHTML= "smaller number";
+			}
+	else if(a > y){
+		document.getElementById('bee').innerHTML= "larger  number";
+		}
+		else if(a = y){
+			document.getElementById('ree').innerHTML= "You won matched with answer:" + y;
+		}
+}
+function check3()
+{
+
+		var b = document.getElementById("num3").value;
+		 if (b != y)
+		{
+		document.getElementById("reee").innerHTML = "You lose!";
+		document.getElementById("re").innerHTML ="Right answer is:" + y;
+		}
+		else if(b = y){
+			document.getElementById('ree').innerHTML= "You won matched with answer:" + y;
+		}
+		
+}
+</script>
+</head>
+
+<body>
+	<div class="box">
+		<h1>Guess Number Game</h1>
+		<hr>
+		<p>You have three chances to guess the right number.</p>
+		<p>Enter Numbers between 0 to 100</p>
+		<p>First Attemp</p>
+		<input type="number" id="num">
+		<input type="button" value="click here" onClick="check1()"><br>
+		<p>Second Attemp</p>
+		<input type="number" id="num2">
+		<input type="button" value="click here" onClick="check2()"><br>
+		<p>Third Attemp</p>
+		<input type="number" id="num3">
+		<input type="button" value="click here" onClick="check3()"><br>
+		<p id="ree"></p>
+		<p id="bee"></p>
+		<p id="reee"></p>
+		<p id="re"></p>
+	</div>
+
+</body>
+</html>
